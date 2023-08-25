@@ -7,14 +7,17 @@ import csv
 from math import pow
 import numpy as np
 import matplotlib.pyplot as plot
+import os
 
-rssi_data = pd.read_csv("...rssi1.csv").values.flatten()
+fname = os.getcwd()
+
+rssi_data = pd.read_csv(fname+"\\rssi1.csv").values.flatten()
 
 rssi_data = np.flip(rssi_data)
 i = np.arange(0, rssi_data.size, 1)
-rssi_arr_1 = np.genfromtxt("...rssi1.csv", delimiter=',')
-rssi_arr_2 = np.genfromtxt("...rssi2.csv", delimiter=',')
-rssi_arr_3 = np.genfromtxt("...rssi3.csv", delimiter=',')
+rssi_arr_1 = np.genfromtxt(fname+"\\rssi1.csv", delimiter=',')
+rssi_arr_2 = np.genfromtxt(fname+"\\rssi2.csv", delimiter=',')
+rssi_arr_3 = np.genfromtxt(fname+"\\rssi3.csv", delimiter=',')
 
 
 n=1.8 # beta değeri
